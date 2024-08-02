@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    window.addEventListener("mousemove", parallax);
+    function parallax(e){
+        document.querySelectorAll(".object").forEach(function(move){
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) /10;
+        var y = (e.clientY * moving_value) /1000;
+
+        move.style.transform = "translateX(" + x +"px) translateY(" + y + "px)";
+        });
+    }
+
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script type="text/javascript">
+function scrollVideo() {
+    var video = $('#video').get(0),
+        videoLength = video.duration,
+        scrollPosition = $(document).scrollTop();
+
+    video.currentTime = (scrollPosition / ($(document).height() - $(window).height())) * videoLength;
+}
+
+$(window).scroll(function(e) {
+    scrollVideo();
+});
+</script>

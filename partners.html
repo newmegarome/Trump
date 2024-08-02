@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>AP Partners</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+    <header id="header">
+        <a href="index.html" class="logo"><img id="logo" class="object" data-value="-2" src="logot.png" alt=""></img></a> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#sec">About</a></li>
+            <li><a href="https://twitter.com/AP_apeking" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="partners.html" class="active">Partners</a></li>
+            <li><a href="https://zora.co/collections/0xaf6563ccf3b6a81596a1b4b09cabf389466079c0" target="_blank" rel="noopener noreferrer">Ape in</a></li>
+        </ul>  
+    </header>
+
+    <section>
+        <h2 id="text"><span>We know we can't do it alone</span><br>Thank you!</h2>
+        <img id="video" class="object" data-value="-2" src="vid.jpg" alt=""></img> 
+        <!-- <a href="https://zora.co/collections/0xaf6563ccf3b6a81596a1b4b09cabf389466079c0" target="_blank" rel="noopener noreferrer" id="btn">Mint it</a> -->
+    </section>
+
+    <div class="sec2">
+        <h2>Our <br>Partners</h2>
+
+        <a href="https://raritysniper.com/nft-drops-calendar" class="rslink" target="_blank" rel="noopener noreferrer"><img id="rs" class="object" data-value="-2" src="rsniper.png" alt=""></img></a>
+        <a href="https://www.jpg.store/" class="jpglink" target="_blank" rel="noopener noreferrer"><img id="zora" class="object" data-value="-2" src="jpgstore.png" alt=""></img></a>
+        <a href="https://www.nft-stats.com/" class="statlink" target="_blank" rel="noopener noreferrer"><img id="zora" class="object" data-value="-2" src="stats.webp" alt=""></img></a>
+        <a href="https://nftcalendar.io/" class="nftclink" target="_blank" rel="noopener noreferrer"><img id="zora" class="object" data-value="-2" src="nftc.png" alt=""></img></a>  
+
+        <!-- <p>
+        Rarity Sniper   
+        </p> -->
+        
+    </div>
+
+    <script>
+      
+        let btn = document.getElementById('btn');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.1 + '%';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.6 + 'px';
+        })
+    </script>
+
+
+<script type="text/javascript">
+    window.addEventListener("mousemove", parallax);
+    function parallax(e){
+        document.querySelectorAll(".object").forEach(function(move){
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) /120;
+        var y = (e.clientY * moving_value) /300;
+
+        move.style.transform = "translateX(" + x +"px) translateY(" + y + "px)";
+        });
+    }
+
+</script>
+
+
+
+   </body>
+</html>
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script type="text/javascript">
+function scrollVideo() {
+    var video = $('#video').get(0),
+        videoLength = video.duration,
+        scrollPosition = $(document).scrollTop();
+
+    video.currentTime = (scrollPosition / ($(document).height() - $(window).height())) * videoLength;
+}
+
+$(window).scroll(function(e) {
+    scrollVideo();
+});
+</script> -->
